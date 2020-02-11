@@ -29,7 +29,7 @@ class SentryLogger
     /**
      * @var SentryAdaptor
      */
-    public $client = null;
+    public $adaptor = null;
 
     /**
      * Stipulates what gets shown in the Sentry UI, should some metric not be

@@ -27,6 +27,14 @@ class SentryHandler extends AbstractProcessingHandler
 
     use Injectable;
 
+    /** @var SentryAdaptor|null */
+    private $client = null;
+
+    /**
+     * @var string|null
+     */
+    public $log_level = null;
+
     /**
      * @param  int     $level
      * @param  boolean $bubble
@@ -38,6 +46,8 @@ class SentryHandler extends AbstractProcessingHandler
         // Returns an instance of {@link SentryLogger}
         $logger = SentryLogger::factory($extras);
         $this->client = $logger->getAdaptor();
+
+        $level = $this->log_level?$this->log_level:$level;
 
         parent::__construct($level, $bubble);
     }
