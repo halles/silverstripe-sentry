@@ -3,8 +3,6 @@ Name: sentry-config
 ---
 
 PhpTek\Sentry\Log\SentryLogger:
-  # One of the permitted severities: DEBUG|INFO|WARNING|ERROR|FATAL
-  log_level: WARNING
   dependencies:
     adaptor: %$PhpTek\Sentry\Adaptor\SentryAdaptor
 
@@ -12,3 +10,7 @@ SilverStripe\Core\Injector\Injector:
   Psr\Log\LoggerInterface:
     calls:
       - [ pushHandler, [ %$PhpTek\Sentry\Handler\SentryHandler ]]
+  %PhpTek\Sentry\Handler\SentryHandler:
+     properties:
+       # One of the permitted severities: DEBUG|INFO|WARNING|ERROR|FATAL
+       log_level: WARNING
