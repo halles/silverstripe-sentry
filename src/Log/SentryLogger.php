@@ -53,7 +53,6 @@ class SentryLogger
         $user = $config['user'] ?? [];
         $tags = $config['tags'] ?? [];
         $extra = $config['extra'] ?? [];
-        // Set the minimum reporting level
         $level = $config['level'] ?? [];
         $logger = Injector::inst()->create(static::class);
 
