@@ -34,7 +34,7 @@ class SentryErrorTypes
     private static $error_type_mappings = [
         'fatal' => E_ERROR | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING,
         'error' => E_RECOVERABLE_ERROR | E_USER_ERROR,
-        'warning' => E_DEPRECATED | E_USER_DEPRECATED | E_WARNING | E_WARNING,
+        'warning' => E_DEPRECATED | E_USER_DEPRECATED | E_WARNING | E_USER_WARNING,
         'info' => E_NOTICE | E_USER_NOTICE | E_STRICT,
         'debug' => E_ALL,
     ];
