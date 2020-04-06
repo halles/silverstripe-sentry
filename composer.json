@@ -1,5 +1,5 @@
 {
-    "name": "halles/sentry",
+    "name": "phptek/sentry",
     "type": "silverstripe-vendormodule",
     "license": "BSD-3-Clause",
     "description": "Sentry.io integration for SilverStripe. Binds Sentry.io to SilverStripe's error & exception handling subsystem.",
