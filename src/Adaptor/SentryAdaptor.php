@@ -18,7 +18,6 @@ use Sentry\Severity;
 use SilverStripe\Core\Config\Configurable;
 use SilverStripe\Core\Injector\Injector;
 use SilverStripe\Core\Environment as Env;
-use PhpTek\Sentry\Adaptor\SentrySeverity;
 
 /**
  * The SentryAdaptor provides a functionality bridge between the getsentry/sentry
