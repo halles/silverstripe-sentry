@@ -6,11 +6,11 @@ PhpTek\Sentry\Log\SentryLogger:
   dependencies:
     adaptor: %$PhpTek\Sentry\Adaptor\SentryAdaptor
 
+PhpTek\Sentry\Adaptor\SentryAdaptor:
+  # One of the permitted severities: DEBUG|INFO|WARNING|ERROR|FATAL
+  log_level: WARNING
+
 SilverStripe\Core\Injector\Injector:
   Psr\Log\LoggerInterface:
     calls:
       - [ pushHandler, [ %$PhpTek\Sentry\Handler\SentryHandler ]]
-  %PhpTek\Sentry\Handler\SentryHandler:
-     properties:
-       # One of the permitted severities: DEBUG|INFO|WARNING|ERROR|FATAL
-       log_level: WARNING

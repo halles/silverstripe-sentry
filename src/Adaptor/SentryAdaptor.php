@@ -156,6 +156,12 @@ class SentryAdaptor
             $opts['dsn'] = $dsn;
         }
 
+        if ($log_level = $this->config()->get('log_level')) {
+            $error_types = new SentryErrorTypes($log_level);
+
+            $opts['error_types'] = $error_types->getErrorBitmask();
+        }
+
         // Env vars take precedence over YML config in array_merge()
         $opts = Injector::inst()
             ->convertServiceProperty(array_merge($this->config()->get('opts') ?? [], $opts));
