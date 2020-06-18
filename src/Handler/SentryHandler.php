@@ -43,7 +43,7 @@ class SentryHandler extends AbstractProcessingHandler
      * @param  array   $extras
      * @return void
      */
-    public function __construct(int $level = Logger::DEBUG, bool $bubble = true, array $extras = [])
+    public function __construct(int $level = Logger::WARNING, bool $bubble = true, array $extras = [])
     {
         // Returns an instance of {@link SentryLogger}
         $logger = SentryLogger::factory($extras);
